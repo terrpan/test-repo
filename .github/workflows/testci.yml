@@ -29,14 +29,5 @@ jobs:
       url: https://example.com/production
 
     steps:
-      - name: Wait for Manual Approval
-        uses: actions/manual-approval@v1
-        with:
-          environment: production
-          message: "Approve to deploy to production"
-
-      - name: Checkout code
-        uses: actions/checkout@v3
-
       - name: Simulate Deployment to Production
         run: echo "Deploying to production environment..."
